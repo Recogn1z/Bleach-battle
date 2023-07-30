@@ -1,0 +1,263 @@
+[gd_scene load_steps=21 format=3 uid="uid://bmvwken5jv3fx"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_gobju"]
+[ext_resource type="Texture2D" uid="uid://cp81nthcex5ay" path="res://texture/bg.jpg" id="2_p30dl"]
+[ext_resource type="Texture2D" uid="uid://byxyl37e3yhfw" path="res://texture/bar.png" id="3_qvk7i"]
+[ext_resource type="Texture2D" uid="uid://dqmc1lydn7d85" path="res://texture/role.png" id="4_ahv0b"]
+[ext_resource type="Texture2D" uid="uid://bdexnbjglipvo" path="res://texture/bgi.png" id="5_51eyn"]
+[ext_resource type="Texture2D" uid="uid://c85jq7hvs6dax" path="res://texture/gold.tga" id="6_hrpx8"]
+[ext_resource type="Texture2D" uid="uid://bgoe0b8q3ukmn" path="res://texture/cbg1.png" id="7_nfkuh"]
+[ext_resource type="Texture2D" uid="uid://bemv753au3rqj" path="res://texture/c2.png" id="8_m24eh"]
+[ext_resource type="Texture2D" uid="uid://b7w0weg01t4oe" path="res://texture/quality_name_3.png" id="9_ldq1u"]
+[ext_resource type="Texture2D" uid="uid://dp8rcqpajlqxq" path="res://texture/items_box_1.png" id="10_i22oc"]
+[ext_resource type="Texture2D" uid="uid://npcs60hsqt8y" path="res://texture/items_box_2.png" id="11_c22mm"]
+[ext_resource type="Texture2D" uid="uid://di4v2cnrrt6ei" path="res://texture/items_box_3.png" id="12_gyo44"]
+[ext_resource type="Texture2D" uid="uid://78qbmrkt8hwr" path="res://texture/items_box_4.png" id="13_xnadx"]
+[ext_resource type="Texture2D" uid="uid://b0ndmliwu3jbs" path="res://texture/items_box_5.png" id="14_23mry"]
+[ext_resource type="Texture2D" uid="uid://by75ufanv1uql" path="res://texture/items_box_6.png" id="15_6g05s"]
+[ext_resource type="Texture2D" uid="uid://r0ibddlvs560" path="res://texture/card_head_28.png" id="16_us61c"]
+[ext_resource type="Script" path="res://script/choujiangButton.gd" id="17_wyq4t"]
+[ext_resource type="Script" path="res://script/battleButton.gd" id="18_ycb0i"]
+
+[sub_resource type="Theme" id="Theme_5xjax"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_l3140"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gobju")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 95.0
+offset_right = 642.0
+offset_bottom = 1154.0
+texture = ExtResource("2_p30dl")
+expand_mode = 1
+
+[node name="top" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+texture = ExtResource("3_qvk7i")
+
+[node name="TextureRect" type="TextureRect" parent="top"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 4.0
+offset_right = 126.0
+offset_bottom = 141.0
+texture = ExtResource("4_ahv0b")
+
+[node name="TextureRect2" type="TextureRect" parent="top"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 14.0
+offset_right = 419.0
+offset_bottom = 89.0
+texture = ExtResource("5_51eyn")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="top/TextureRect2"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -2.0
+offset_right = 77.0
+offset_bottom = 84.0
+texture = ExtResource("6_hrpx8")
+
+[node name="Label" type="Label" parent="top/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 58.0
+offset_top = 4.0
+offset_right = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5xjax")
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.72549, 0.32549, 0.482353, 1)
+theme_override_colors/font_shadow_color = Color(0.584314, 0.235294, 0.356863, 1)
+theme_override_colors/font_outline_color = Color(0.486275, 0.34902, 0.560784, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="top"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 240.0
+offset_right = 567.0
+offset_bottom = 819.0
+texture = ExtResource("7_nfkuh")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="top"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 343.0
+offset_right = 523.0
+offset_bottom = 750.0
+texture = ExtResource("8_m24eh")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="top/TextureRect4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="mid" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="mid"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 121.0
+offset_right = 621.0
+offset_bottom = 217.0
+texture = ExtResource("9_ldq1u")
+
+[node name="ProgressBar" type="ProgressBar" parent="mid/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -35.0
+offset_right = 165.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="mid/TextureRect"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 24.0
+offset_right = 603.0
+offset_bottom = 108.0
+
+[node name="Label" type="Label" parent="mid/TextureRect/HBoxContainer"]
+layout_mode = 2
+text = "HP："
+
+[node name="Label2" type="Label" parent="mid/TextureRect/HBoxContainer"]
+layout_mode = 2
+text = "ATK:"
+
+[node name="wuqi" type="TextureRect" parent="mid"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 343.0
+offset_right = 170.0
+offset_bottom = 463.0
+texture = ExtResource("10_i22oc")
+
+[node name="tou" type="TextureRect" parent="mid"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 499.0
+offset_right = 165.0
+offset_bottom = 619.0
+texture = ExtResource("11_c22mm")
+
+[node name="xianglian" type="TextureRect" parent="mid"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 685.0
+offset_right = 170.0
+offset_bottom = 805.0
+texture = ExtResource("12_gyo44")
+
+[node name="yifu" type="TextureRect" parent="mid"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 345.0
+offset_right = 622.0
+offset_bottom = 465.0
+texture = ExtResource("13_xnadx")
+
+[node name="fabao" type="TextureRect" parent="mid"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 510.0
+offset_right = 616.0
+offset_bottom = 630.0
+texture = ExtResource("14_23mry")
+
+[node name="lingpai" type="TextureRect" parent="mid"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 674.0
+offset_right = 622.0
+offset_bottom = 794.0
+texture = ExtResource("15_6g05s")
+
+[node name="btn" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 182.0
+offset_top = 727.0
+offset_right = 438.0
+offset_bottom = 958.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_us61c")
+
+[node name="fight" type="Button" parent="btn"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 979.0
+offset_right = 393.0
+offset_bottom = 1041.0
+text = "Fight"
+icon = SubResource("ViewportTexture_l3140")
+script = ExtResource("18_ycb0i")
+
+[node name="gatcha2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 124.0
+offset_top = 398.0
+offset_right = 250.0
+offset_bottom = 459.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Gatcha"
+script = ExtResource("17_wyq4t")
+
+[node name="inventory" type="Button" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 967.0
+offset_right = 196.0
+offset_bottom = 1025.0
+text = "Inventory"
+
+[connection signal="pressed" from="btn/fight" to="btn/fight" method="_on_pressed"]
+[connection signal="pressed" from="gatcha2" to="gatcha2" method="_on_pressed"]
